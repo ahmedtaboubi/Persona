@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Narratif - ThéâtrePro Futur</title>
+    <meta name="description"
+        content="Formation Leadership Narratif : Passez du management opérationnel à une posture qui incarne la culture.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Leadership Narratif - ThéâtrePro Futur">
+    <meta property="og:description" content="Incarnez la vision.">
+    <meta property="og:image" content="../assets/img/favicon_neon_mask.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/favicon_neon_mask.png">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=5.0">
+</head>
+
+<body class="dark-theme">
+    <div class="noise-overlay"></div>
+    <div id="spotlight"></div>
+    <canvas id="webgl-bg"></canvas>
+
+    <!-- DYNAMIC LIGHTS (Synced with 3D Masks via JS) -->
+    <div id="dynamic-lights">
+        <div id="light-1" class="moving-glow glow-cyan"></div>
+        <div id="light-2" class="moving-glow glow-red"></div>
+        <div id="light-3" class="moving-glow glow-purple"></div>
+    </div>
+
+    <!-- SITE LOGO (Standalone) -->
+    <a href="/" class="site-logo">
+        <img src="../assets/img/logo-white.png" alt="TheatrePro" class="logo-img logo-dark">
+        <img src="../assets/img/logo-black.png" alt="TheatrePro" class="logo-img logo-light">
+        <span class="logo-text">PERSONA</span>
+    </a>
+
+    <!-- TUBELIGHT NAV -->
+    <nav class="tubelight-nav">
+        <div class="nav-container">
+            <!-- Lamp (Active Indicator) -->
+            <div id="nav-lamp" class="nav-lamp">
+                <div class="lamp-beam"></div>
+                <div class="lamp-glow"></div>
+            </div>
+
+            <!-- Items Wrapper -->
+            <div class="nav-items-wrapper" id="nav-links">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/#offres" class="nav-item active">Offres</a>
+                <a href="/squad/" class="nav-item">Nos Experts</a>
+                <a href="/#contact" class="nav-item">Contact</a>
+            </div>
+
+            <!-- Mobile L-Shape Controls -->
+            <div class="mobile-l-shape">
+                <a href="https://wa.me/212614693835" class="whatsapp-float" target="_blank"
+                    aria-label="WhatsApp Contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-message-circle">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                </a>
+                <div class="mobile-bottom-row">
+                    <div class="tubelight-switch">
+                        <div id="theme-switch" class="wall-switch" role="button" aria-label="Interrupteur">
+                            <div class="switch-plate">
+                                <div class="switch-rocker"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="hamburger-menu" id="mobile-menu-btn" aria-label="Menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="section">
+        <div class="container center">
+            <h1 class="glitch-text reveal-on-scroll" style="color: var(--neon-purple);">LEADERSHIP NARRATIF &
+                INCARNATION</h1>
+            <p class="subtitle reveal-on-scroll delay-100">"Un manager dirige des dossiers. Un leader guide des humains.
+                Passez de l'autorité statutaire à l'autorité naturelle."</p>
+
+            <div class="glass-card reveal-on-scroll delay-200"
+                style="max-width: 900px; margin: 0 auto; text-align: left; padding: 3rem; border-color: var(--neon-purple);">
+
+                <!-- 1. PHILOSOPHIE -->
+                <div class="module-section">
+                    <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">1. NOTRE PHILOSOPHIE : LE LEADER COMME
+                        METTEUR EN SCÈNE</h3>
+                    <p>Être leader, c'est être en représentation permanente. Vos équipes ne scrutent pas seulement vos
+                        décisions, elles scrutent votre attitude, votre calme et votre énergie. Dans ce programme, nous
+                        utilisons les techniques de l'acteur (gestion du stress, occupation de l'espace, voix) pour
+                        aider vos dirigeants à incarner leur fonction. Nous transformons le "Chef" en "Guide" capable de
+                        donner du sens et d'inspirer l'action par la puissance du récit.</p>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(112, 111, 211, 0.4); margin: 2rem 0;">
+
+                <!-- 2. PILIERS -->
+                <div class="module-section">
+                    <h3 style="color: var(--neon-purple); margin-bottom: 1.5rem;">2. LES 4 PILIERS DU PROGRAMME</h3>
+                    <ul class="cyber-list">
+                        <li style="margin-bottom: 2rem;">
+                            <strong>01. Présence Magnétique (L'Ancrage)</strong><br>
+                            L'autorité ne se crie pas, elle rayonne. Avant même de parler, un leader doit inspirer
+                            confiance.<br>
+                            <span style="color: var(--neon-purple); font-weight: 600;">L'objectif :</span> Travailler la
+                            physiologie du leadership : le regard, le silence, la respiration et l'ancrage au sol.
+                            Apprendre à occuper l'espace pour rassurer et fédérer sans avoir besoin de hausser le ton.
+                        </li>
+                        <li style="margin-bottom: 2rem;">
+                            <strong>02. Vision Incarnée (Le "Why")</strong><br>
+                            Les règles définissent le "Comment", la vision définit le "Pourquoi". Un leader qui ne sait
+                            pas raconter l'histoire de son entreprise ne sera pas suivi.<br>
+                            <span style="color: var(--neon-purple); font-weight: 600;">L'objectif :</span> Maîtriser le
+                            Storytelling de Vision. Transformer des objectifs chiffrés froids en une épopée collective
+                            motivante. Faire passer les valeurs de l'entreprise du mur du hall d'accueil au cœur des
+                            collaborateurs.
+                        </li>
+                        <li style="margin-bottom: 2rem;">
+                            <strong>03. Intelligence Situationnelle (L'Improvisation)</strong><br>
+                            Le plan survit rarement à la réalité. En période d'incertitude, l'équipe regarde le leader
+                            pour savoir comment réagir.<br>
+                            <span style="color: var(--neon-purple); font-weight: 600;">L'objectif :</span> Développer
+                            l'agilité mentale. Accepter l'imprévu non comme une erreur, mais comme une nouvelle donnée à
+                            intégrer. Rester lucide et décisif quand tout bouge (la technique du "Oui, et...").
+                        </li>
+                        <li style="margin-bottom: 2rem;">
+                            <strong>04. Alignement Bienveillant (Le Feedback)</strong><br>
+                            Comme un metteur en scène avec ses acteurs, le rôle du leader est de faire briller les
+                            autres, pas lui-même.<br>
+                            <span style="color: var(--neon-purple); font-weight: 600;">L'objectif :</span> Apprendre à
+                            donner du feedback difficile sans briser l'ego. Passer d'une exigence cassante à une
+                            exigence qui fait grandir. Savoir "diriger le jeu" de ses collaborateurs pour qu'ils donnent
+                            le meilleur d'eux-mêmes.
+                        </li>
+                    </ul>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(112, 111, 211, 0.4); margin: 2rem 0;">
+
+                <!-- 3. METHODE STUDIO -->
+                <div class="module-section">
+                    <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">3. LA MÉTHODE "STUDIO"</h3>
+                    <p style="margin-bottom: 1rem;">Ici, on ne théorise pas le leadership, on le pratique.</p>
+                    <ul class="cyber-list">
+                        <li><span class="marker">>></span> <strong>Le Labo de Prise de Parole :</strong> Exercices
+                            intensifs devant caméra et public pour casser les tics de langage et la timidité.</li>
+                        <li><span class="marker">>></span> <strong>Simulations de Crise :</strong> Nous plongeons vos
+                            leaders dans des scénarios complexes joués par nos comédiens pour tester leur sang-froid en
+                            temps réel.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="/#contact" class="btn-main" style="background: var(--neon-purple);">RÉSERVER UNE
+                        SESSION</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- WHATSAPP FLOATING BUTTON (DESKTOP EXTERNAL) -->
+    <a href="https://wa.me/212614693835" class="whatsapp-desktop" target="_blank" aria-label="WhatsApp Contact">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-message-circle">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="glass-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <!-- Footer Logo Replaced -->
+                <a href="/" class="site-logo footer-logo">
+                    <img src="../assets/img/logo-white.png" alt="TheatrePro" class="logo-img logo-dark">
+                    <img src="../assets/img/logo-black.png" alt="TheatrePro" class="logo-img logo-light">
+                    <span class="logo-text">PERSONA</span>
+                </a>
+                <p class="f-tagline">Reconfigurez votre réalité.</p>
+                <div class="copyright">SYSTEM ONLINE © 2026</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="../assets/js/background3d.js"></script>
+    <script src="../assets/js/script.js?v=2.3"></script>
+</body>
+
+</html>

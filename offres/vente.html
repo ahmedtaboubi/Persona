@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influence & Négociation - ThéâtrePro Futur</title>
+    <meta name="description"
+        content="Formation Influence & Négociation : Dépassez la transaction pour créer une résonance émotionnelle durable.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Influence & Négociation - ThéâtrePro Futur">
+    <meta property="og:description" content="Persuasion authentique et engagement durable.">
+    <meta property="og:image" content="../assets/img/favicon_neon_mask.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/favicon_neon_mask.png">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=5.0">
+</head>
+
+<body class="dark-theme">
+    <div class="noise-overlay"></div>
+    <div id="spotlight"></div>
+    <canvas id="webgl-bg"></canvas>
+
+    <!-- DYNAMIC LIGHTS (Synced with 3D Masks via JS) -->
+    <div id="dynamic-lights">
+        <div id="light-1" class="moving-glow glow-cyan"></div>
+        <div id="light-2" class="moving-glow glow-red"></div>
+        <div id="light-3" class="moving-glow glow-purple"></div>
+    </div>
+
+    <!-- SITE LOGO (Standalone) -->
+    <a href="/" class="site-logo">
+        <img src="../assets/img/logo-white.png" alt="TheatrePro" class="logo-img logo-dark">
+        <img src="../assets/img/logo-black.png" alt="TheatrePro" class="logo-img logo-light">
+        <span class="logo-text">PERSONA</span>
+    </a>
+
+    <!-- TUBELIGHT NAV -->
+    <nav class="tubelight-nav">
+        <div class="nav-container">
+            <!-- Lamp (Active Indicator) -->
+            <div id="nav-lamp" class="nav-lamp">
+                <div class="lamp-beam"></div>
+                <div class="lamp-glow"></div>
+            </div>
+
+            <!-- Items Wrapper -->
+            <div class="nav-items-wrapper" id="nav-links">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/#offres" class="nav-item active">Offres</a>
+                <a href="/squad/" class="nav-item">Nos Experts</a>
+                <a href="/#contact" class="nav-item">Contact</a>
+            </div>
+
+            <!-- Mobile L-Shape Controls -->
+            <div class="mobile-l-shape">
+                <a href="https://wa.me/212614693835" class="whatsapp-float" target="_blank"
+                    aria-label="WhatsApp Contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-message-circle">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                </a>
+                <div class="mobile-bottom-row">
+                    <div class="tubelight-switch">
+                        <div id="theme-switch" class="wall-switch" role="button" aria-label="Interrupteur">
+                            <div class="switch-plate">
+                                <div class="switch-rocker"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="hamburger-menu" id="mobile-menu-btn" aria-label="Menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="section">
+        <div class="container center">
+            <h1 class="glitch-text reveal-on-scroll">L'ART DE L'INFLUENCE NARRATIVE</h1>
+            <p class="subtitle reveal-on-scroll delay-100">"Nous ne formons pas des vendeurs. Nous révélons des
+                stratèges de l'émotion."</p>
+
+            <div class="glass-card reveal-on-scroll delay-200"
+                style="max-width: 900px; margin: 0 auto; text-align: left; padding: 3rem;">
+
+                <!-- 1. PHILOSOPHIE -->
+                <div class="module-section">
+                    <h3 style="color: var(--neon-cyan); margin-bottom: 1rem;">1. NOTRE PHILOSOPHIE : LA FIN DU SCRIPT
+                    </h3>
+                    <p>À l'ère du numérique, vos clients sont sur-informés. Ils connaissent vos produits et détectent
+                        les scripts de vente à des kilomètres. Ce qu'ils cherchent, ce n'est plus de l'information,
+                        c'est de la connexion. Dans ce module, nous déconstruisons les réflexes commerciaux obsolètes
+                        (le "forcing", le par cœur) pour les remplacer par les outils du comédien : l'écoute radicale,
+                        l'intelligence émotionnelle et la capacité à improviser avec justesse.</p>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(51, 217, 178, 0.2); margin: 2rem 0;">
+
+                <!-- 2. PILIERS -->
+                <div class="module-section">
+                    <h3 style="color: var(--neon-cyan); margin-bottom: 1.5rem;">2. LES 4 PILIERS DU PROGRAMME</h3>
+                    <ul class="cyber-list">
+                        <li style="margin-bottom: 2rem;">
+                            <strong>01. Le Storytelling Stratégique (L'Art du Récit)</strong><br>
+                            Les chiffres informent, les histoires vendent. Nous apprenons à vos équipes à structurer
+                            leur argumentaire comme un scénario captivant.<br>
+                            <span style="color: var(--neon-cyan); font-weight: 600;">L'objectif :</span> Ne plus vendre
+                            une "solution technique", mais emmener le client dans une projection future où son problème
+                            est résolu. C'est le passage du "Quoi" au "Pourquoi".
+                        </li>
+                        <li style="margin-bottom: 2rem;">
+                            <strong>02. La Posture d'Expert (Le Statut Scénique)</strong><br>
+                            En théâtre, tout est une question de statut. Si votre commercial arrive en "demandeur", il a
+                            déjà perdu.<br>
+                            <span style="color: var(--neon-cyan); font-weight: 600;">L'objectif :</span> Travailler la
+                            voix, le regard et l'ancrage au sol pour établir immédiatement une relation d'égal à égal.
+                            On passe de la posture du "vendeur qui supplie" à celle du "médecin qui diagnostique".
+                        </li>
+                        <li style="margin-bottom: 2rem;">
+                            <strong>03. Intelligence Relationnelle & Non-Verbal</strong><br>
+                            90% de la négociation se joue dans le silence et le sous-texte. Comme un acteur qui écoute
+                            son partenaire, vos collaborateurs apprendront à lire les micro-expressions et les
+                            hésitations de leur interlocuteur.<br>
+                            <span style="color: var(--neon-cyan); font-weight: 600;">L'objectif :</span> Décoder ce qui
+                            n'est pas dit pour répondre aux vrais freins, pas aux fausses excuses.
+                        </li>
+                        <li style="margin-bottom: 2rem;">
+                            <strong>04. Engagement Durable (La Confiance)</strong><br>
+                            Le "One shot" ne nous intéresse pas. Nous travaillons sur la création d'une alliance.<br>
+                            <span style="color: var(--neon-cyan); font-weight: 600;">L'objectif :</span> Transformer la
+                            transaction en relation. Créer une résonance telle que la question du prix devient
+                            secondaire face à la valeur de la relation de confiance établie.
+                        </li>
+                    </ul>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(51, 217, 178, 0.2); margin: 2rem 0;">
+
+                <!-- 3. METHODE STUDIO -->
+                <div class="module-section">
+                    <h3 style="color: var(--neon-cyan); margin-bottom: 1rem;">3. LA MÉTHODE "STUDIO"</h3>
+                    <p style="margin-bottom: 1rem;">Pas de PowerPoint soporifique. Nous utilisons la Simulation
+                        Réaliste.</p>
+                    <ul class="cyber-list">
+                        <li><span class="marker">>></span> Nos comédiens incarnent vos clients les plus difficiles (le
+                            sceptique, l'agressif, l'indécis).</li>
+                        <li><span class="marker">>></span> Vos équipes s'entraînent dans un "laboratoire" sécurisé.</li>
+                        <li><span class="marker">>></span> Le feedback est immédiat, bienveillant et chirurgical.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="/#contact" class="btn-main">RÉSERVER UNE SESSION</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- WHATSAPP FLOATING BUTTON (DESKTOP EXTERNAL) -->
+    <a href="https://wa.me/212614693835" class="whatsapp-desktop" target="_blank" aria-label="WhatsApp Contact">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-message-circle">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="glass-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <!-- Footer Logo Replaced -->
+                <a href="/" class="site-logo footer-logo">
+                    <img src="../assets/img/logo-white.png" alt="TheatrePro" class="logo-img logo-dark">
+                    <img src="../assets/img/logo-black.png" alt="TheatrePro" class="logo-img logo-light">
+                    <span class="logo-text">PERSONA</span>
+                </a>
+                <p class="f-tagline">Reconfigurez votre réalité.</p>
+                <div class="copyright">SYSTEM ONLINE © 2026</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="../assets/js/background3d.js"></script>
+    <script src="../assets/js/script.js?v=2.3"></script>
+</body>
+
+</html>
