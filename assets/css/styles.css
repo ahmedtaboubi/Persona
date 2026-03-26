@@ -908,7 +908,86 @@ body.light-mode .switch-plate {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* --- CINEMATIC FOOTER (ADDED V14) --- */
+/* --- SWITCH POINTER (START HERE) --- */
+.tubelight-switch {
+    position: relative !important; /* Ensure pointer is centered under THIS element */
+}
+.switch-pointer {
+    display: none; /* Hide in Dark Mode */
+    position: absolute;
+    left: 50%;
+    top: 150%; /* BELOW desktop switch */
+    transform: translateX(-50%);
+    flex-direction: column-reverse; /* Arrow then Text */
+    align-items: center;
+    gap: 2px;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: bounceDownPointer 2s infinite ease-in-out;
+    z-index: 50000;
+}
+
+body.light-mode .switch-pointer {
+    display: flex !important; /* Visible ONLY when Lights are ON */
+}
+
+.switch-pointer span {
+    font-family: var(--font-heading) !important;
+    font-size: 0.65rem !important;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2px 8px;
+    border: 1px solid var(--neon-cyan);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.switch-pointer::after {
+    content: '↑'; /* Point UP to switch from below */
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+@keyframes bounceDownPointer {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(5px); }
+}
+
+@media (max-width: 768px) {
+    .switch-pointer {
+        top: auto;
+        bottom: 150%; /* ABOVE mobile switch */
+        flex-direction: column; /* Text then Arrow */
+    }
+    .switch-pointer::after {
+        content: '↓'; /* Point DOWN to switch from above */
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .switch-pointer {
+        top: auto;
+        bottom: 140%;
+        flex-direction: column; /* Text then Arrow */
+        z-index: 50000; /* Ensure on top of everything on mobile */
+    }
+    .switch-pointer::after {
+        content: '↓'; /* Point DOWN to the switch */
+    }
+    @keyframes bounceDown {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(-5px); }
+    }
+}
+
 .glass-footer {
     border-top: 1px solid var(--glass-border);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
@@ -2282,6 +2361,7 @@ body.light-mode .logo-dark {
         align-items: center;
         gap: 20px;
         /* Space between Switch and Burger */
+        position: relative !important; /* Anchor for the pointer since the switch container is static */
     }
 
     /* WhatsApp Button Override for Mobile */
@@ -2298,7 +2378,7 @@ body.light-mode .logo-dark {
 
     /* Switch Override for Mobile */
     .tubelight-switch {
-        position: static !important;
+        position: static !important; /* Restored to original layout */
         margin: 0 !important;
         transform: scale(0.9);
     }

@@ -131,6 +131,38 @@ document.addEventListener('DOMContentLoaded', () => {
         mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     });
 
+    // --- MOBILE TOUCH SWIPE ---
+    document.addEventListener('touchstart', (event) => {
+        if (event.touches.length > 0) {
+            mouse.x = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.touches[0].clientY / window.innerHeight) * 2 + 1;
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchmove', (event) => {
+        if (event.touches.length > 0) {
+            mouse.x = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.touches[0].clientY / window.innerHeight) * 2 + 1;
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchend', () => {
+        mouse.set(-10, -10); // Reset off-screen after swipe
+    });
+
+    // --- GYROSCOPE GRAVITY (DEVICE ORIENTATION) ---
+    let tiltX = 0;
+    let tiltY = 0;
+
+    window.addEventListener('deviceorientation', (event) => {
+        if (event.gamma !== null && event.beta !== null) {
+            // Gamma (left/right tilt) [-90, 90] -> Normalize [-1, 1] over 30deg range
+            tiltX = Math.max(-1, Math.min(1, event.gamma / 30));
+            // Beta (front/back tilt) [-180, 180] -> 45deg is 'natural' tilt
+            tiltY = Math.max(-1, Math.min(1, (event.beta - 45) / 30));
+        }
+    });
+
     // --- ANIMATION LOOP ---
     const clock = new THREE.Clock();
 
@@ -171,6 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // A. Base Floating Animation (Sine wave drift)
             const floatY = Math.sin(time + mask.id) * 0.005;
             mask.position.y += floatY;
+
+            // B. GYROSCOPE GRAVITY (DRIFT)
+            const gravityForce = new THREE.Vector3(tiltX * 0.005, -tiltY * 0.005, 0);
+            mask.userData.velocity.add(gravityForce);
 
             // Continuous gentle rotation
             let baseRotation = 0.002;
