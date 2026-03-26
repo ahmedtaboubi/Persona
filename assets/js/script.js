@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeSwitch = document.getElementById('theme-switch');
 
     // 1. Check Saved Theme on Load
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-theme');
+    } else {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-mode');
     }
 
     // Web Audio API Context (Lazy init)
