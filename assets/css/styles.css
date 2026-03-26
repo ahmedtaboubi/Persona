@@ -25,7 +25,7 @@
 
 body {
     background-color: var(--bg-dark);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/theatre_stage_bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('..assets/img/theatre_stage_bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
