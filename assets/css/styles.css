@@ -25,7 +25,9 @@
 
 body {
     background-color: var(--bg-dark);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('..assets/img/theatre_stage_bg.png');
+   /* Robust background fallbacks for GitHub Pages / Deployed environments */
+    background-image: url("../img/theatre_stage_bg.png"); /* Fallback for browsers that struggle with multi-layer backgrounds */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/theatre_stage_bg.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -34,6 +36,13 @@ body {
     overflow-x: hidden;
     position: relative;
     line-height: 1.6;
+}
+
+/* Fix for mobile where 'background-attachment: fixed' is broken */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
 }
 
 /* BACKGROUND FX */
